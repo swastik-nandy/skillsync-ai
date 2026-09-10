@@ -938,4 +938,4 @@ LLM Reasoning
 
 **Keywords can bluff. Embeddings have receipts. 🧠📄**
 
-If SkillSync AI helped you explore RAG, semantic search, or resume intelligence, consider giving the repository a ⭐.
+If SkillSync AI helped you to build the best resume for your job application, explore RAG, semantic search, or resume intelligence, consider giving the repository a ⭐.
