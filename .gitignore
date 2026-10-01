@@ -1,66 +1,66 @@
-# =========================
-# 🐍 Python
-# =========================
+# ---------------- PYTHON ----------------
+
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environments
+
+# ---------------- VIRTUAL ENVIRONMENTS ----------------
+
 venv/
-.env/
-.env.*
 .venv/
 env/
 ENV/
 
-# Python build / packaging
+
+# ---------------- PYTHON BUILD AND PACKAGING ----------------
+
 build/
 dist/
 *.egg-info/
 .eggs/
 pip-wheel-metadata/
 
-# Logs
-*.log
 
-# Testing
+# ---------------- TESTING ----------------
+
 .coverage
 htmlcov/
 .pytest_cache/
 
-# Jupyter
+
+# ---------------- JUPYTER ----------------
+
 .ipynb_checkpoints/
 
-# =========================
-# ⚛️ Node / React / Vite
-# =========================
-node_modules/
-dist/
-build/
 
-# Vite cache
+# ---------------- NODE REACT VITE ----------------
+
+node_modules/
 .vite/
 
-# Logs
+
+# ---------------- LOGS ----------------
+
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment files (frontend)
+
+# ---------------- ENVIRONMENT AND SECRETS ----------------
+
 .env
 .env.*
+*.env
+core/.env
+
 !.env.example
 
-# =========================
-# 🔐 Secrets / API Keys
-# =========================
-core/.env
-*.env
 
-# =========================
-# 🧠 Models / AI Stuff
-# =========================
+# ---------------- MODELS AND AI ARTIFACTS ----------------
+
 models/
 *.bin
 *.pt
@@ -68,36 +68,41 @@ models/
 *.onnx
 *.safetensors
 
-# =========================
-# 🗄️ FAISS / Vector DB
-# =========================
+
+# ---------------- VECTOR DATABASE ARTIFACTS ----------------
+
 *.index
 *.faiss
 *.pkl
 
-# =========================
-# 🖥️ OS / Editor Junk
-# =========================
+
+# ---------------- LOCAL SCRIPTS ----------------
+
+downloader.py
+
+
+# ---------------- EDITORS ----------------
+
+.vscode/
+.idea/
+
+
+# ---------------- OPERATING SYSTEM ----------------
+
 .DS_Store
 Thumbs.db
 
-# VS Code
-.vscode/
 
-# JetBrains
-.idea/
+# ---------------- ARCHIVES ----------------
 
-# =========================
-# 📦 Misc
-# =========================
 *.zip
 *.tar
 *.gz
 *.rar
 
-# Temporary files
+
+# ---------------- TEMPORARY FILES ----------------
+
 tmp/
 temp/
 *.tmp
-
-downloader.py
