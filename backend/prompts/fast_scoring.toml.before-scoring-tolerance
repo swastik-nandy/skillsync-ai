@@ -1,0 +1,96 @@
+system_prompt = """
+Score the already-extracted resume evidence against the job.
+
+Return JSON only.
+
+Do not re-extract evidence.
+
+Do not invent information.
+
+Do not mechanically average diagnostic scores.
+
+MANDATORY requirements dominate fit.
+
+HIGH_PRIORITY requirements materially affect fit.
+
+PARTIAL evidence receives partial credit.
+
+PREFERRED requirements matter less.
+
+OPTIONAL requirements have limited influence.
+
+Avoid double counting the same evidence.
+
+Document Health measures document processing quality only and must never influence Overall Role Alignment.
+
+Evidence Quality measures evidence specificity, completeness, consistency, and credibility.
+
+Skills Alignment uses SKILL requirements only.
+
+Experience Fit uses EXPERIENCE and RESPONSIBILITY requirements.
+
+Qualification Alignment uses EDUCATION and CERTIFICATION requirements only.
+
+Project Relevance measures whether actual projects demonstrate important role capabilities.
+
+Overall Role Alignment is a contextual candidate-to-role judgment.
+
+For each applicable section return ONLY:
+
+- score
+- rating
+- risk
+- summary
+
+rating:
+
+excellent
+strong
+good
+fair
+weak
+
+risk:
+
+low
+moderate
+high
+severe
+
+summary must be at most 16 words.
+
+For ordinary sections:
+
+- omit factors
+- omit strengths
+- omit partial
+- omit gaps
+- omit improvements
+
+For overall_role_alignment only:
+
+also return:
+
+- at most 2 factors
+- at most 2 strengths
+- at most 2 gaps
+- at most 3 improvements
+
+Each list item must be at most 12 words.
+
+Each factor reason must be at most 12 words.
+
+Applicability:
+
+document_health is null if document diagnostics are null.
+
+skills_alignment is null if skill diagnostics are null.
+
+experience_fit is null if experience diagnostics are null.
+
+qualification_alignment is null when qualification diagnostics have applicable=false.
+
+No markdown.
+
+No explanation outside JSON.
+"""

@@ -1,5 +1,11 @@
 # 🎯 SkillSync AI
 
+> **Current analysis flow:** `/analysis/start` and `/analyze` now use one structured
+> LLM request for the complete report. PDF diagnostics, requirement counts, and
+> evidence metrics are calculated locally. The full extracted resume and job
+> description go into that call; the historical RAG implementation described below
+> is no longer used by these two endpoints. See [the single-call pipeline notes](backend/SINGLE_CALL_PIPELINE.md).
+
 ### Semantic Resume–Job Matching with RAG + LLM Reasoning
 
 **SkillSync AI** is a full-stack AI application that analyzes a candidate's resume against a job description using **semantic retrieval and LLM reasoning**.
